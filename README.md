@@ -7,44 +7,31 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## Simple Forms with useForm and Formik
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+This repository demonstrates the implementation of two simple forms in a React application. One form is built using react-hook-form (useForm), and the other uses Formik. This project provides a side-by-side comparison of these two popular libraries for form handling in React.
 
-- Configure the top-level `parserOptions` property like this:
+## Features
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+useForm: A lightweight library for managing forms in React with minimal re-renders.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+Formik: A robust library for handling forms with built-in support for validation and state management.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Example usage of validation for both forms.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+Minimal styling to keep the focus on functionality.
+
+## Installation
+
+1. Clone the repository:
+
+git clone https://github.com/your-username/simple-forms.git
+
+2. Install dependencies:
+
+pnpm install
+
+3. Start the development server:
+
+pnpm run dev
+
